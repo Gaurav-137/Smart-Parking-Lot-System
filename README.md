@@ -1,30 +1,35 @@
-# 🚗 Smart Parking Lot System (Full Stack JS)
+# 🚗 Smart Parking Lot System
 
-## 📌 Overview
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![React](https://img.shields.io/badge/React-Frontend-blue)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-A **Smart Parking Lot System** built using:
+---
 
-* ⚙️ **Node.js + Express** (Backend)
-* ⚛️ **React.js** (Frontend)
-* 🗄 **SQL / In-Memory DB**
-* 🎨 **HTML + CSS**
+## 💡 About This Project
 
-This system manages:
+This project is part of my journey to master **Low-Level Design (LLD)** and build real-world backend systems.
 
-* Vehicle entry & exit
-* Smart parking spot allocation
-* Real-time availability tracking
-* Fee calculation
+It simulates a **Smart Parking Lot System** that handles:
+
+* 🚘 Vehicle entry & exit
+* 🅿️ Smart parking spot allocation
+* 💰 Parking fee calculation
+* 📊 Real-time availability
+
+If you're preparing for **system design interviews**, this is a great hands-on reference.
+
+⭐ If you like this project, consider giving it a star!
 
 ---
 
 ## 🎯 Features
 
-* 🚘 Automatic parking spot allocation (based on vehicle type)
-* 🕒 Entry & exit tracking
-* 💰 Dynamic fee calculation
-* 📊 Real-time parking availability
-* 🔄 Concurrency-safe operations
+* Automatic spot allocation based on vehicle type
+* Entry & exit tracking with ticket generation
+* Fee calculation based on duration
+* Real-time parking availability
+* Clean frontend UI with React
 
 ---
 
@@ -37,46 +42,66 @@ Backend API (Node.js + Express)
         ↓
 Service Layer (Business Logic)
         ↓
-Database (SQL / In-memory)
+In-Memory Data Store
 ```
 
 ---
 
-## 🧠 Spot Allocation Strategy
+## 🗃 Data Model
 
-* First-fit strategy
-* Filter by vehicle type
-* Can be extended to:
+### ParkingSpot
 
-  * Nearest spot
-  * Priority floors
-  * Reservation system
+```
+id, type, isAvailable, floor
+```
+
+### Vehicle
+
+```
+licensePlate, type
+```
+
+### Ticket
+
+```
+id, vehicle, spotId, entryTime, exitTime, fee
+```
 
 ---
 
-## ⚡ Concurrency Handling
+## 🎥 Demo
 
-* Node.js event loop handles async requests
-* Can scale using:
+### 📌 Option 1: If video is uploaded to this repo
 
-  * Redis locks
-  * Queue systems (Bull / Kafka)
+👉 First upload your video (e.g. `demo.mp4`) to your repo root
+
+Then use:
+
+[![Watch Demo](https://img.shields.io/badge/Click%20to%20Watch-Demo-blue?style=for-the-badge)](./demo.mp4)
 
 ---
 
-## 🔮 Future Improvements
+## 🤝 Let's Connect
 
-* 🧾 QR-based ticket system
-* 📱 Mobile app integration
-* 🧠 AI-based parking prediction
-* 💳 Online payments
-* 📡 IoT sensor integration
+If you found this project useful or interesting, feel free to connect with me!
+
+👉 https://www.linkedin.com/in/gaurav-lad137
+
+I’d love to discuss:
+
+* System Design
+* Backend Engineering
+* Tech & Career Growth 🚀
 
 ---
 
 ## 👨‍💻 Author
 
-Gaurav Lad
+**Gaurav**
+
+* 💼 LinkedIn: https://www.linkedin.com/in/gaurav-lad137
+* 📧 Open to opportunities and collaborations
 
 ---
 
+⭐ If you found this helpful, don’t forget to star the repo!
